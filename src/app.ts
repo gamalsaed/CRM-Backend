@@ -10,11 +10,7 @@ import { protect } from "./middlewares/authMiddleware";
 
 const app = express();
 
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000", // Next.js
-  }),
-);
+app.use(cors());
 
 app.use(express.json());
 
